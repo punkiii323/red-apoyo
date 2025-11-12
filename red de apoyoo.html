@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Red de Apoyo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #ECF0F1; color: #2C3E50; line-height: 1.6; }
+    header { background: linear-gradient(135deg, #2C3E50, #34495E); color: white; text-align: center; padding: 80px 20px; }
+    header h1 { font-size: 2.8em; margin-bottom: 10px; }
+    header p { font-size: 1.2em; opacity: 0.9; }
+    .contenido { max-width: 900px; margin: 50px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); }
+    .contenido h2 { color: #2C3E50; margin-bottom: 15px; }
+    .contenido p { margin-bottom: 20px; }
+    .contenido ul { margin: 15px 0; padding-left: 20px; }
+    .opciones { display: flex; justify-content: center; gap: 40px; margin: 60px auto; flex-wrap: wrap; }
+    .card { background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); width: 300px; text-align: center; transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-8px); }
+    .card h2 { margin-bottom: 20px; font-size: 1.5em; color: #2C3E50; }
+    .btn { display: inline-block; margin-top: 20px; padding: 14px 28px; font-size: 1em; font-weight: 600; border: none; border-radius: 8px; cursor: pointer; transition: background 0.3s ease; text-decoration: none; }
+    .btn-ayuda { background: #E74C3C; color: white; } .btn-ayuda:hover { background: #c0392b; }
+    .btn-apoyo { background: #27AE60; color: white; } .btn-apoyo:hover { background: #1e8449; }
+    section { display: none; max-width: 900px; margin: 40px auto; padding: 30px; background: white; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); }
+    section h2 { color: #2C3E50; margin-bottom: 20px; }
+    footer { text-align: center; padding: 20px; background: #2C3E50; color: white; margin-top: 60px; }
+    textarea { width: 100%; height: 100px; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-family: 'Poppins', sans-serif; margin-bottom: 10px; }
+    #listaTestimonios { margin-top: 20px; list-style: none; padding: 0; }
+    #listaTestimonios li { background: #f9f9f9; margin-bottom: 10px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .volver { margin-top: 15px; display: inline-block; color: #2C3E50; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Red de Apoyo</h1>
+    <p>Un espacio de orientación y acompañamiento</p>
+  </header>
+
+  <!-- Intro -->
+  <div class="contenido">
+<h2>Bienvenido a la Red de Apoyo</h2>
+    <p>
+      Este espacio ha sido creado para brindar orientación, información y acompañamiento a quienes
+      atraviesan momentos difíciles o desean apoyar a alguien más. Aquí encontrarás recursos confiables,
+      líneas de ayuda inmediatas y testimonios anónimos que muestran que no estás solo/a.
+    </p>
+    <h2>¿Qué es el suicidio?</h2>
+    <p>
+      La depresión no es tristeza común, es una enfermedad medica que es tratable, y se caracteriza por un estado de animo deprimido o la perdida de interés por actividades durante un periodo de tiempo que suele ser de dos semanas o mas, que afecta física y psicológicamente a una persona. Tiene como síntomas comunes: 
+</p>
+<ul>
+<li>Tristeza, vacío o desánimo persistente.
+<li>Pérdida de interés o placer en casi todas las actividades (anhedonia).
+<li>Sentimientos de inutilidad, culpa excesiva o desesperanza.
+<li>Fatiga o pérdida de energía.
+<li>Alteraciones del sueño (insomnio o dormir demasiado).
+<li>Cambios en el apetito o el peso (pérdida o aumento).
+<li>Agitación o lentitud psicomotora (movimientos y habla más lentos).
+<li>Problemas físicos sin causa aparente (dolor de cabeza, dolor crónico, etc.).
+<li>Dificultad para pensar, concentrarse o tomar decisiones.
+<li>Pensamientos recurrentes de muerte o suicidio.
+   </ul>
+
+    <h2>¿Cómo prevenirlo?</h2>
+    <p>
+      La prevención se basa en la detección temprana de señales de riesgo, la creación de redes de apoyo
+      y la promoción de espacios seguros para hablar de lo que se siente. Algunas acciones clave son:
+    </p>
+    <ul>
+      <li>Escuchar sin juzgar a quien atraviesa un momento difícil.</li>
+      <li>Promover la comunicación abierta en la familia, escuela y comunidad.</li>
+      <li>Conocer y difundir líneas de ayuda y recursos profesionales.</li>
+      <li>Fomentar hábitos de autocuidado y bienestar emocional.</li>
+    </ul>
+  </div>
+
+  <!-- Tarjetas -->
+  <div class="opciones">
+    <div class="card">
+      <h2>Necesito ayuda</h2>
+      <p>Encuentra apoyo inmediato y recursos prácticos para ti.</p>
+      <button class="btn btn-ayuda" data-seccion="necesito">Entrar</button>
+    </div>
+    <div class="card">
+      <h2>Conozco a alguien</h2>
+      <p>Aprende cómo acompañar y brindar apoyo a otra persona.</p>
+      <button class="btn btn-apoyo" data-seccion="conozco">Entrar</button>
+    </div>
+    <div class="card">
+      <h2>Testimonios</h2>
+      <p>Lee y comparte experiencias anónimas.</p>
+      <button class="btn btn-apoyo" data-seccion="testimonios">Entrar</button>
+    </div>
+  </div>
+
+  <!-- Sección: Necesito ayuda -->
+  <section id="necesito">
+  <h2>Si necesitas ayuda</h2>
+  <p><strong>Si usted está en peligro inmediato o pensando en autolesionarse, no espere.</strong></p>
+  <ul>
+    <li><strong>Emergencias (Policía/Ambulancia): 911</strong></li>
+    <li><strong>Línea de la Vida (Apoyo 24/7):
+    <li><strong> 800
+    <li><strong> 2000
+    <li><strong>Ayuda Psicológica:
+    <li>+52 844 622 6290 - Psicóloga Dulce Ruiz.
+    <li>+52 844 159 8905 - Psicóloga Sonia García Ramírez.
+    <li>+52 844 277 3582 - Psicóloga Lolis Contreras.
+  </ul>
+  <p>
+    Recuerda: la crisis es temporal y la ayuda está disponible. No estás solo/a.  
+    Llama de inmediato a una línea de crisis o acude con un profesional.  
+    Nunca enfrentes esto solo/a.
+  </p>
+  <a href="#" class="volver" data-volver>← Volver</a>
+</section>
+
+  <!-- Sección: Conozco a alguien -->
+  <section id="conozco">
+    <h2>Si conoces a alguien que necesita ayuda</h2>
+    <p>Tu apoyo puede marcar la diferencia.</p>
+    <ul>
+      <li>Cómo detectar señales de riesgo: hablar de morir, buscar medios letales, despedirse, aislarse, cambios de ánimo.</li>
+      <li>Qué hacer si ves las señales (Protocolo QPR): 
+        <ol>
+          <li><strong>Preguntar:</strong> Pregunta directamente a la persona si está pensando en suicidarse o ha tenido pensamientos suicidas: "Por lo que me cuentas, pareces tener mucho dolor, ¿estás pensando en quitarte la vida?".</li>
+          <li><strong>Persuadir:</strong> Persuade a la persona de buscar ayuda profesional de inmediato.</li>
+          <li><strong>Referir:</strong> Acompañar a dicha persona de inmediato a un centro de ayuda o un profesional. Nunca la dejes sola y llama a la línea de ayuda de prevención de suicidio.</li>
+        </ol>
+      </li>
+      <li>Recursos profesionales y líneas de apoyo:</li>
+      <li>Línea de la Vida (800, 911, 2000)
+      <li>CESAME Saltillo
+      <li>hospitales generales
+      <li>Ayuda psicológica (+52 844 622 6290 - Psicóloga Dulce Ruiz, +52 844 159 8905 - Psicóloga Sonia García Ramírez, +52 844 277 3582 - Psicóloga Lolis Contreras.)
+      <li>Recomendaciones para acompañar: escucha sin juzgar, mantén la casa segura, cuida también tu salud mental.</li>
+    </ul>
+    <a href="#" class="volver" data-volver>← Volver</a>
+   </section>
+  
+
+  <!-- Sección: Testimonios -->
+  <section id="testimonios">
+    <h2>Testimonios anónimos</h2>
+    <form id="formTestimonio">
+      <textarea id="textoTestimonio" placeholder="Escribe tu testimonio aquí..." required></textarea><br />
+      <button type="submit" class="btn btn-apoyo">Enviar</button>
+    </form>
+    <ul id="listaTestimonios"></ul>
+    <a href="#" class="volver" data-volver>← Volver</a>
+  </section>
+
+  <footer>
+    <p>Red de Apoyo | 2025</p>
+  </footer>
+
+  <!-- Firebase SDK compat (v9 compat permite usar la API estilo v8) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+<script>
+  // Configuración de Firebase (ya con tus datos)
+  const firebaseConfig = {
+    apiKey: "AIzaSyCvFm5DdGCdBFXzv8_VoYOmbRrhOMbyL5g",
+    authDomain: "red-apoyo-c0eba.firebaseapp.com",
+    projectId: "red-apoyo-c0eba",
+    storageBucket: "red-apoyo-c0eba.firebasestorage.app",
+    messagingSenderId: "560555955043",
+    appId: "1:560555955043:web:a6b91e56f52b33b24df956"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+  //  Generador de usuario anónimo
+  function generarUsuarioAnonimo() {
+    const numero = Math.floor(Math.random() * 1000000);
+    return "anonimo" + numero;
+  }
+
+  // Utilidades de UI
+  function ocultarTodasLasSecciones() {
+    document.getElementById('necesito').style.display = 'none';
+    document.getElementById('conozco').style.display = 'none';
+    document.getElementById('testimonios').style.display = 'none';
+  }
+  function mostrar(seccionId) {
+    document.querySelector('.contenido').style.display = 'none';
+    document.querySelector('.opciones').style.display = 'none';
+    ocultarTodasLasSecciones();
+    document.getElementById(seccionId).style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function volver() {
+    ocultarTodasLasSecciones();
+    document.querySelector('.contenido').style.display = 'block';
+    document.querySelector('.opciones').style.display = 'flex';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    // Botones de tarjetas
+    document.querySelectorAll('.opciones .btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const id = btn.getAttribute('data-seccion');
+        mostrar(id);
+      });
+    });
+
+    // Botones "Volver"
+    document.querySelectorAll('[data-volver]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        volver();
+      });
+    });
+
+    // Testimonios
+    const form = document.getElementById('formTestimonio');
+    const lista = document.getElementById('listaTestimonios');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const texto = document.getElementById('textoTestimonio').value.trim();
+      if (!texto) return;
+
+      try {
+        await db.collection('testimonios').add({
+          mensaje: texto,
+          fecha: firebase.firestore.FieldValue.serverTimestamp(),
+          usuario: generarUsuarioAnonimo()
+        });
+        form.reset();
+      } catch (err) {
+        alert('No se pudo guardar el testimonio. Revisa la consola.');
+        console.error(err);
+      }
+    });
+
+    // Mostrar testimonios en tiempo real
+    db.collection('testimonios').orderBy('fecha', 'desc').onSnapshot(snapshot => {
+      lista.innerHTML = '';
+      snapshot.forEach(doc => {
+        const data = doc.data();
+        const li = document.createElement('li');
+        li.innerHTML = `<strong>${data.usuario || "anónimo"}</strong>: ${data.mensaje}`;
+        lista.appendChild(li);
+      });
+    });
+  });
+</script>
+</body>
+</html>
+
